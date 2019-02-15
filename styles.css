@@ -1,4 +1,7 @@
 .jumbotron {
     text-align: center;
-    
+}
+
+.card-title {
+    font-size: 15pt !important;
 }

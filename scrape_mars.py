@@ -1,7 +1,3 @@
-
-# coding: utf-8
-def scrape():
-
     import pandas
     from splinter import Browser
     from bs4 import BeautifulSoup as bs
@@ -9,11 +5,11 @@ def scrape():
     import pandas as pd
     import time
 
-
+def init_browser():
     executable_path = {"executable_path": "C:\webdrivers\chromedriver.exe"}
-    #executable_path = webdriver.Chrome('C:\webdrivers\chromedriver.exe')
     browser = Browser("chrome", **executable_path, headless=False)
 
+def scrape():
     news_url = "https://mars.nasa.gov/news/?page=0&per_page=40&order=publish_date+desc%2Ccreated_at+desc&search=&category=19%2C165%2C184%2C204&blank_scope=Latest"
     browser.visit(news_url)
     time.sleep(1)
